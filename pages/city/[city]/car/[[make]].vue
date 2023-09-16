@@ -1,3 +1,3 @@
 <template>
-  <div><Navbar /><CarsList /></div>
+  <div><CarsListCard /></div>
 </template>

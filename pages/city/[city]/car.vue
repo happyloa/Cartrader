@@ -1,4 +1,5 @@
 <template>
+  <Navbar />
   <section
     class="
       mx-auto
@@ -13,12 +14,10 @@
       w-3/5
     "
   >
-    <!-- 汽車列表 -->
     <div class="mt-32 flex">
       <!-- 列表頁面側邊攔 -->
       <CarsSideBar />
-      <!-- 汽車卡片列表 -->
-      <CarsListCard />
+      <NuxtPage />
     </div>
   </section>
 </template>
