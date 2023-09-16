@@ -1,5 +1,4 @@
 <template>
-  <Navbar />
   <section
     class="
       mx-auto

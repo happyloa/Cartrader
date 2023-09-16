@@ -1,5 +1,5 @@
 <template>
-  <div><Navbar /><HomeBanner /></div>
+  <div><HomeBanner /></div>
 </template>
 
 <script setup>

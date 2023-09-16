@@ -1,5 +1,5 @@
 <template>
-  <div><Navbar /><CarSinglePage /></div>
+  <div><CarSinglePage /></div>
 </template>
 
 <script setup>
