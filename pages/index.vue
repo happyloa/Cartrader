@@ -1,3 +1,3 @@
 <template>
-  <div><Navbar /><CarSinglePage /></div>
+  <div><Navbar /><HomeBanner /></div>
 </template>
