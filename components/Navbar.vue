@@ -14,6 +14,6 @@
       shadow-md
     "
   >
-    <a class="text-3xl font-mono" href="/">Cartrader</a>
+    <NuxtLink href="/" class="text-3xl font-mono">Cartrader</NuxtLink>
   </header>
 </template>
