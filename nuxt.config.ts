@@ -1,4 +1,7 @@
 export default {
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in' },
+  },
   nitro: {
     preset: 'vercel-edge',
   },
