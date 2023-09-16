@@ -1,3 +1,3 @@
 <template>
-  <div><NavBar /><slot /></div>
+  <div><NavBar /><slot /><Footer /></div>
 </template>
