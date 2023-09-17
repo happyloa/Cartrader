@@ -36,6 +36,8 @@
 </template>
 
 <script setup>
+import CarsSideBar from '@/components/CarsList/CarsSideBar.vue';
+
 // 使用 Vue Router 的 useRoute 函數獲取當前路由的資訊。
 const route = useRoute();
 

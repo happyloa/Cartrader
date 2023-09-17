@@ -4,7 +4,7 @@
   <!-- Hero 區塊：主要用於展示汽車圖片和基本資料 -->
   <div class="mt-10">
     <!-- 圖片區：使用綁定的 car.url 作為圖片來源 -->
-    <img :src="car.url" alt="" class="w-full" />
+    <NuxtImg :src="car.url" alt="" class="w-full" />
     <!-- 汽車名稱 -->
     <h1 class="mt-10 text-4xl">{{ car.name }}</h1>
     <!-- 汽車屬性（座位數、里程數、價格） -->
