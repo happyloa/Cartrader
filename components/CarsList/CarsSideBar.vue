@@ -6,16 +6,20 @@
       <!-- 地點過濾標題 -->
       <h3>Location</h3>
       <!-- 當前選擇的地點 -->
+      <!-- @click 處理器用於顯示/隱藏地點選擇的模態窗口 -->
       <h3 class="text-blue-400 capitalize" @click="updateModal('location')">
         {{ route.params.city }}
       </h3>
-      <!-- 注釋掉的部分是彈出搜尋窗，用於選擇其他地點 -->
-
+      <!-- 彈出搜尋窗，用於選擇其他地點 -->
+      <!-- v-if="modal.location" 控制模態窗口的顯示和隱藏 -->
       <div
         class="absolute border shadow left-48 top-1 p-5 -m-1 bg-white"
         v-if="modal.location"
       >
+        <!-- 地點輸入框 -->
         <input type="text" class="border p-1 rounded" v-model="city" />
+        <!-- 申請按鈕 -->
+        <!-- @click 處理器用於應用選擇的地點並導航到新的URL -->
         <button
           class="
             bg-sky-400
@@ -52,19 +56,26 @@
 </template>
 
 <script setup>
+// 初始化城市名稱為空字串
 const city = ref('');
+// 使用 useRoute 鉤子獲取當前路由信息
 const route = useRoute();
 
+// 初始化模態窗口狀態為關閉
 const modal = ref({
   location: false,
   make: false,
   price: false,
 });
 
+// 更新模態窗口的狀態
+// 接受一個 key 參數，該參數表示要更新的模態窗口類型（地點、製造商或價格）
 const updateModal = (key) => {
   modal.value[key] = !modal.value[key];
 };
 
+// 更改當前選擇的地點
+// 這將更新 URL 並導航到相應的頁面
 const onChangeLocation = () => {
   if (!city.value) return;
   updateModal('location');
