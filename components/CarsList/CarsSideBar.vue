@@ -74,16 +74,25 @@ const updateModal = (key) => {
   modal.value[key] = !modal.value[key];
 };
 
+// 更改當前選擇的地點
+// 這將更新 URL 並導航到相應的頁面
 const onChangeLocation = () => {
   if (!city.value) return;
+
+  // 檢查輸入的城市名稱是否為數字
+  // 如果是，則拋出一個 400 狀態碼的錯誤，並提示 "Invalid city format"
   if (!isNaN(parseInt(city.value))) {
     throw createError({
       statusCode: 400,
       message: 'Invalid city format',
     });
   }
+
+  // 隱藏地點選擇模態窗口
   updateModal('location');
+  // 更新路由以顯示新選擇的城市和車輛製造商
   navigateTo(`/city/${city.value}/car/${route.params.make}`);
+  // 清空輸入的城市名稱
   city.value = '';
 };
 </script>
