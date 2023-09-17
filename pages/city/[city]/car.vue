@@ -10,11 +10,21 @@
       <!-- 自定義錯誤模板，用於顯示錯誤訊息 -->
       <template #error="{ error }">
         <div class="text-center mx-auto">
-          <h1 class="text-6xl text-red-600 mb-10">Sorry, something went wrong</h1>
+          <h1 class="text-6xl text-red-600 mb-10">
+            Sorry, something went wrong
+          </h1>
           <p class="text-4xl mb-10">{{ error }}</p>
           <!-- 點擊此按鈕將清除錯誤並返回 -->
           <button
-            class="border rounded-full text-2xl bg-blue-400 px-7 py-3 text-white"
+            class="
+              border
+              rounded-full
+              text-2xl
+              bg-blue-400
+              px-7
+              py-3
+              text-white
+            "
             @click="error.value = null"
           >
             Go back
