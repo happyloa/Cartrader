@@ -2,7 +2,7 @@ export default {
   nitro: {
     preset: 'vercel-edge',
   },
-  modules: ['@nuxtjs/tailwindcss', '@nuxt/image-edge'],
+  modules: ['@nuxtjs/tailwindcss'],
   head: {
     meta: [
       { charset: 'utf-8' },
