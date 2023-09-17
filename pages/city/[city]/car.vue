@@ -1,10 +1,33 @@
 <template>
   <!-- 主要容器，包含車輛列表和內容 -->
   <div class="mt-32 flex">
-    <!-- 左側的側邊欄，用於顯示車輛篩選選項 -->
-    <CarsSideBar />
-    <!-- 中央的主內容區，用於顯示車輛資訊。這是一個 NuxtPage 元件，會根據路由動態變化。 -->
-    <NuxtPage />
+    <NuxtErrorBoundary>
+      <!-- 左側的側邊欄，用於顯示車輛篩選選項 -->
+      <CarsSideBar />
+      <NuxtPage />
+      <template #error="{ error }">
+        <div class="text-center mx-auto">
+          <h1 class="text-6xl text-red-600 mb-10">
+            Sorry, something went wrong
+          </h1>
+          <p class="text-4xl mb-10">{{ error }}</p>
+          <button
+            class="
+              border
+              rounded-full
+              text-2xl
+              bg-blue-400
+              px-7
+              py-3
+              text-white
+            "
+            @click="error.value = null"
+          >
+            Go back
+          </button>
+        </div>
+      </template>
+    </NuxtErrorBoundary>
   </div>
 </template>
 
