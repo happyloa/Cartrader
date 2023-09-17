@@ -12,7 +12,7 @@
       <!-- 單一汽車卡片容器 -->
       <article class="flex h-full">
         <!-- 汽車圖片區塊：使用綁定的 car.url 作為圖片來源 -->
-        <img :src="car.url" alt="" class="w-[300px] h-full" />
+        <NuxtImg :src="car.url" alt="" class="w-[300px] h-full" />
 
         <!-- 汽車資訊區塊：包括名稱、描述和價格 -->
         <div class="p-4 flex flex-col">
