@@ -30,6 +30,14 @@ const car = computed(() => {
   });
 });
 
+// 如果找不到對應的車輛，則拋出一個 404 錯誤
+if (!car.value) {
+  throw createError({
+    statusCode: 404,
+    message: `Car ${route.params.name} with ID of ${route.params.id} does not exist`,
+  });
+}
+
 // 使用 definePageMeta 函數設定頁面的 meta 數據
 // 在這裡，將 layout 設置為 'custom'，這是一個自定義的佈局
 definePageMeta({
