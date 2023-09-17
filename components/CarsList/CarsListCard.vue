@@ -7,7 +7,7 @@
       v-for="car in cars"
       :key="car.id"
       :car="car"
-      @click="navigateTo(`/car/${car.name.replace(/\s/g, '')}-${car.id}`)"
+      @click="navigateTo(`/car/${car.name}-${car.id}`)"
     >
       <article class="flex h-full">
         <!-- 顯示汽車圖片 -->
