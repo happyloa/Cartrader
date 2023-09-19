@@ -6,14 +6,17 @@ import Outline from '@/assets/heartOutline.webp';
 // 定義元件屬性。這個元件預期接收一個名為 "car" 的 Object。
 const props = defineProps({
   car: Object,
+  favored: Boolean,
 });
 
 // 使用 useState 創建一個反應性的狀態變量 "favored" 用來記錄是否已經收藏了這輛車。
 // 我們使用車輛的 ID 來創建一個獨一無二的狀態鍵。
 // 初始值設為 false，表示未收藏。
-const favored = useState(`favored-${props.car.id}`, () => {
-  return false;
-});
+// const favored = useState(`favored-${props.car.id}`, () => {
+//   return false;
+// });
+
+const emit = defineEmits(['favor']);
 </script>
 
 <template>
@@ -28,7 +31,7 @@ const favored = useState(`favored-${props.car.id}`, () => {
       :src="favored ? Filled : Outline"
       alt="收藏圖示"
       class="absolute w-7 right-5 top-4 z-20"
-      @click="favored = !favored"
+      @click="emit('favor', car.id)"
     />
 
     <!-- 單一汽車的主要信息區塊 -->
