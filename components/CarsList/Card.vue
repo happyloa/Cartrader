@@ -1,16 +1,16 @@
 <script setup>
-  // 引入兩種不同的心形圖標：一個填充（已收藏），一個空心（未收藏）。
-  import Filled from '@/assets/heartFilled.webp';
-  import Outline from '@/assets/heartOutline.webp';
+// 引入兩種不同的心形圖標：一個填充（已收藏），一個空心（未收藏）。
+import Filled from '@/assets/heartFilled.webp';
+import Outline from '@/assets/heartOutline.webp';
 
-  // 定義元件的接收屬性：車輛數據（car）和是否已收藏（favored）。
-  const props = defineProps({
-    car: Object,
-    favored: Boolean,
-  });
+// 定義元件的接收屬性：車輛數據（car）和是否已收藏（favored）。
+const props = defineProps({
+  car: Object,
+  favored: Boolean,
+});
 
-  // 定義可以發出的自定義事件列表，這裡只有一個 "favor" 事件。
-  const emit = defineEmits(['favor']);
+// 定義可以發出的自定義事件列表，這裡只有一個 "favor" 事件。
+const emit = defineEmits(['favor']);
 </script>
 
 <template>
