@@ -1,19 +1,19 @@
 <script setup>
-  // 引入兩種不同的心形圖標：一個填充（已收藏），一個空心（未收藏）
-  import Filled from '@/assets/heartFilled.webp';
-  import Outline from '@/assets/heartOutline.webp';
+// 引入兩種不同的心形圖標：一個填充（已收藏），一個空心（未收藏）
+import Filled from '@/assets/heartFilled.webp';
+import Outline from '@/assets/heartOutline.webp';
 
-  // 定義元件屬性。這個元件預期接收一個名為 "car" 的 Object。
-  const props = defineProps({
-    car: Object,
-  });
+// 定義元件屬性。這個元件預期接收一個名為 "car" 的 Object。
+const props = defineProps({
+  car: Object,
+});
 
-  // 使用 useState 創建一個反應性的狀態變量 "favored" 用來記錄是否已經收藏了這輛車。
-  // 我們使用車輛的 ID 來創建一個獨一無二的狀態鍵。
-  // 初始值設為 false，表示未收藏。
-  const favored = useState(`favored-${props.car.id}`, () => {
-    return false;
-  });
+// 使用 useState 創建一個反應性的狀態變量 "favored" 用來記錄是否已經收藏了這輛車。
+// 我們使用車輛的 ID 來創建一個獨一無二的狀態鍵。
+// 初始值設為 false，表示未收藏。
+const favored = useState(`favored-${props.car.id}`, () => {
+  return false;
+});
 </script>
 
 <template>
