@@ -4,7 +4,7 @@
     <!-- Nuxt.js 的自定義錯誤邊界組件 -->
     <NuxtErrorBoundary>
       <!-- 側邊欄組件，用於篩選車輛 -->
-      <CarsSideBar />
+      <CarsListSideBar />
       <!-- Nuxt.js 的內容區域 -->
       <NuxtPage />
       <!-- 自定義錯誤模板，用於顯示錯誤訊息 -->
@@ -36,8 +36,6 @@
 </template>
 
 <script setup>
-import CarsSideBar from '@/components/CarsList/CarsSideBar.vue';
-
 // 使用 Vue Router 的 useRoute 函數獲取當前路由的資訊。
 const route = useRoute();
 
